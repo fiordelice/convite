@@ -6,116 +6,138 @@
   <title>Convite – Gabriella 19 anos</title>
 
   <style>
+    /* ====== BASE ====== */
     body {
       margin: 0;
       padding: 0;
       font-family: "Poppins", sans-serif;
-     background: radial-gradient(circle at top, #b185ff 0%, #6c46bd 50%, #2e1a5b 100%);
+      background: radial-gradient(circle at top, #b185ff 0%, #6c46bd 50%, #2e1a5b 100%);
       min-height: 100vh;
       overflow-x: hidden;
-    }
-
-    .wrap {
-      padding: 24px;
       display: flex;
       justify-content: center;
+      align-items: center;
+      padding: 30px;
     }
 
+    /* ====== CARD GLASS ====== */
     .card {
       width: 100%;
       max-width: 900px;
-     background: transparent;
-      border-radius: 26px;
-      padding: 28px;
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
-      position: relative;
-      overflow: hidden;
-      display: grid;
-      gap: 28px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 28px;
+      padding: 40px 32px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.30);
+      text-align: center;
+      animation: fadeIn 1.4s ease;
     }
 
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(25px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
 
-    /* Título preto PROFISSIONAL */
+    /* ====== TÍTULO ====== */
     h1 {
       margin: 0;
-      font-size: 2.6rem;
-      color: white;
+      font-size: 2.8rem;
+      color: #ffffff;
       font-weight: 700;
-      text-align: center;
       letter-spacing: 1px;
+      text-shadow: 0 0 22px rgba(255, 255, 255, 0.6);
     }
 
+    /* ====== SUBTÍTULO ====== */
     .subtitle {
-      font-size: 1.2rem;
-      color: white;
-      margin-top: -10px;
-      text-align: center;
+      font-size: 1.25rem;
+      color: #e8dbff;
+      margin-top: 6px;
+      opacity: 0.9;
     }
 
+    /* ====== FOTO ====== */
     .foto-redonda {
-      width: 180px;
-      height: 180px;
+      width: 190px;
+      height: 190px;
       object-fit: cover;
       border-radius: 50%;
-      margin: 0 auto;
+      margin: 26px auto 10px;
       display: block;
-      box-shadow: 0 0 25px rgba(130, 100, 255, 0.5);
+      border: 4px solid rgba(255, 255, 255, 0.45);
+      box-shadow: 0 0 30px rgba(229, 206, 255, 0.5);
+      animation: fotoPulse 4s ease-in-out infinite;
     }
 
+    @keyframes fotoPulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1); }
+    }
+
+    /* ====== INFORMAÇÕES ====== */
     .info {
-      margin-top: 20px;
-      font-size: 1.1rem;
-      color: white;
-      line-height: 1.6;
+      margin-top: 25px;
+      font-size: 1.18rem;
+      color: #ffffff;
+      line-height: 1.7;
+      font-weight: 300;
     }
 
+    /* ====== MAPA ====== */
     iframe {
       width: 100%;
       height: 300px;
       border: 0;
-      border-radius: 16px;
-      margin-top: 20px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      border-radius: 18px;
+      margin-top: 26px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.35);
     }
 
-    /* Botão profissional */
+    /* ====== BOTÃO ====== */
     .btn-confirmar {
       display: block;
-      background: linear-gradient(135deg, #8f5bff, #5f2ccd);
+      margin-top: 32px;
+      background: linear-gradient(135deg, #caa5ff, #7d4bff);
       color: white;
-      padding: 16px;
+      padding: 18px;
       text-align: center;
-      border-radius: 14px;
-      font-size: 1.2rem;
+      border-radius: 16px;
+      font-size: 1.25rem;
       font-weight: 700;
       text-decoration: none;
-      box-shadow: 0 8px 20px rgba(120, 70, 255, 0.4);
+      box-shadow: 0 8px 25px rgba(155, 90, 255, 0.45);
       transition: .25s;
+      letter-spacing: 0.5px;
     }
 
     .btn-confirmar:hover {
-      transform: translateY(-4px);
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 12px 30px rgba(155, 90, 255, 0.55);
     }
 
+    /* ====== RESPONSIVIDADE ====== */
     @media (max-width: 600px) {
-      h1 { font-size: 1.7rem; }
-      .card { padding: 20px; }
+      h1 { font-size: 2rem; }
+      .subtitle { font-size: 1.05rem; }
+      .foto-redonda { width: 150px; height: 150px; }
+      .info { font-size: 1rem; }
+      .btn-confirmar { font-size: 1.1rem; }
     }
-
   </style>
 </head>
 
 <body>
 
-  <div class="wrap">
-    <div class="card">
-
+  <div class="card">
 
       <h1>Gabriella Fiordelice – 19 anos</h1>
 
       <img src="gabi.jpg" class="foto-redonda">
 
-      <div class="subtitle">Quero você comigo nesse dia especial! </div>
+      <div class="subtitle">Quero você comigo nesse dia especial! ✨</div>
 
       <div class="info">
         📅 <b>Data:</b> 07 de fevereiro <br>
@@ -126,16 +148,13 @@
       <!-- MAPA -->
       <iframe src="https://www.google.com/maps?q=Primo%20Antonio%20Marchetti%20600%20Santa%20Rosa%20Mirand%C3%B3polis&output=embed"></iframe>
 
-      <!-- BOTÃO QUE ENVIA EMAIL -->
-     <a class="btn-confirmar"
- href="mailto:fiordelicegabriella@gmail.com?subject=Confirmação de Presença – Festa da Gabriella&body=Olá, Gabriella!%0D%0A%0D%0AQuero confirmar minha presença no seu aniversário.%0D%0A%0D%0ANome:%20___________%0D%0A%0D%0AEnviado pelo convite digital."
+      <!-- BOTÃO (ENVIA EMAIL) -->
+      <a class="btn-confirmar"
+        href="mailto:fiordelicegabriella@gmail.com?subject=Confirmação de Presença – Festa da Gabriella&body=Olá!%0D%0A%0D%0AConfirmo minha presença no seu aniversário.%0D%0A%0D%0ANome:%20___________%0D%0A%0D%0AEnviado pelo convite digital."
+        onclick="alert('Obrigada! Seu e-mail está abrindo agora. Confirme o envio.');">
+        Confirmar Presença
+      </a>
 
-   onclick="alert('Obrigada! Seu e-mail está abrindo agora. Confirme o envio.');">
-   Confirmar Presença 
-</a>
-
-
-    </div>
   </div>
 
 </body>
