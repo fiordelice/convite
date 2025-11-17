@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Convite – Gabriella 19 anos</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #7bbbe6, #a367ec);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .wrap {
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 900px;
+      background: #ffffff;
+      border-radius: 26px;
+      padding: 28px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      gap: 28px;
+    }
+
+    /* Balões dark profissionais */
+    .balloon {
+      position: absolute;
+      width: 120px;
+      height: 150px;
+      background: radial-gradient(circle at 30% 35%, #6e4db8, #3d2778, #1e103f);
+      border-radius: 60% 60% 55% 55% / 70% 70% 30% 30%;
+      opacity: 0.9;
+      animation: float 6s ease-in-out infinite, drift 7s ease-in-out infinite;
+      filter: drop-shadow(0 0 20px rgba(110, 70, 255, 0.4));
+      z-index: -1;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-22px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @keyframes drift {
+      0% { transform: translateX(0px); }
+      50% { transform: translateX(15px); }
+      100% { transform: translateX(0px); }
+    }
+
+    .b1 { left: -30px; top: 40px; }
+    .b2 { right: -30px; top: 100px; animation-duration: 8s; }
+    .b3 { left: 40%; top: -40px; animation-duration: 7s; }
+
+    /* Título preto PROFISSIONAL */
+    h1 {
+      margin: 0;
+      font-size: 2.6rem;
+      color: #000000;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #5a4b6f;
+      margin-top: -10px;
+      text-align: center;
+    }
+
+    .foto-redonda {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0 auto;
+      display: block;
+      border: 4px solid white;
+      box-shadow: 0 0 25px rgba(130, 100, 255, 0.5);
+    }
+
+    .info {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #4d3a59;
+      line-height: 1.6;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 16px;
+      margin-top: 20px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Botão profissional */
+    .btn-confirmar {
+      display: block;
+      background: linear-gradient(135deg, #8f5bff, #5f2ccd);
+      color: white;
+      padding: 16px;
+      text-align: center;
+      border-radius: 14px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(120, 70, 255, 0.4);
+      transition: .25s;
+    }
+
+    .btn-confirmar:hover {
+      transform: translateY(-4px);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.7rem; }
+      .card { padding: 20px; }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="wrap">
+    <div class="card">
+
+      <!-- Balões -->
+      <div class="balloon b1"></div>
+      <div class="balloon b2"></div>
+      <div class="balloon b3"></div>
+
+      <h1>Gabriella Fiordelice – 19 anos</h1>
+
+      <img src="gabi.jpg" class="foto-redonda">
+
+      <div class="subtitle">Quero você comigo nesse dia especial! 💜</div>
+
+      <div class="info">
+        📅 <b>Data:</b> 07 de fevereiro <br>
+        ⏰ <b>Horário:</b> a partir das 20:00h <br>
+        🏡 <b>Local:</b> Rua Primo Antônio Marchetti, 600 – Santa Rosa, Mirandópolis
+      </div>
+
+      <!-- MAPA -->
+      <iframe src="https://www.google.com/maps?q=Primo%20Antonio%20Marchetti%20600%20Santa%20Rosa%20Mirand%C3%B3polis&output=embed"></iframe>
+
+      <!-- BOTÃO QUE ENVIA EMAIL -->
+     <a class="btn-confirmar"
+   href="mailto:fiordelicegabriella@gmail.com?subject=Confirmação de Presença – Aniversário Gabriella&body=Olá Gabriella!%0D%0A%0D%0AConfirmo presença na sua festa!%0D%0A%0D%0ANome:%20___________%0D%0A%0D%0AEnviado pelo convite online."
+   onclick="alert('Obrigada! Seu e-mail está abrindo agora. Confirme o envio.');">
+   Confirmar Presença 
+</a>
+
+
+    </div>
+  </div>
+
+</body>
+</html>
